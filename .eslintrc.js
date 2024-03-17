@@ -8,4 +8,8 @@ module.exports = {
     'no-useless-escape': 'off',
     'no-case-declarations': 'off',
   },
+  error:
+  {
+    "endOfLine": "auto"
+  }
 };
