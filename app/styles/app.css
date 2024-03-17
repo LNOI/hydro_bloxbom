@@ -306,11 +306,17 @@ aside li {
 * routes/__index
 * --------------------------------------------------
 */
+.list-featured-collection {
+  display: flex;
+  flex-direction: row;
+}
+
 .featured-collection {
   display: block;
   margin-bottom: 2rem;
   position: relative;
 }
+
 
 .featured-collection-image {
   aspect-ratio: 1 / 1;

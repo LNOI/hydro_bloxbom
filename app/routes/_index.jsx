@@ -16,10 +16,12 @@ export const meta = () => {
 export async function loader({context}) {
   const {storefront} = context;
   const {collections} = await storefront.query(FEATURED_COLLECTION_QUERY);
-  const featuredCollection = collections.nodes[0];
-  const recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY);
 
-  return defer({featuredCollection, recommendedProducts});
+  // const featuredCollection = collections.nodes[0];
+  const recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY);
+  // return defer({featuredCollection, recommendedProducts});
+  return defer({collections,recommendedProducts})
+
 }
 
 export default function Homepage() {
@@ -27,7 +29,8 @@ export default function Homepage() {
   const data = useLoaderData();
   return (
     <div className="home">
-      <FeaturedCollection collection={data.featuredCollection} />
+      {/* <FeaturedCollection collection={data.featuredCollection} /> */}
+      <ListFeaturedCollection collections={data.collections} />
       <RecommendedProducts products={data.recommendedProducts} />
     </div>
   );
@@ -38,6 +41,17 @@ export default function Homepage() {
  *   collection: FeaturedCollectionFragment;
  * }}
  */
+
+function ListFeaturedCollection({collections}) {
+  if (!collections) return null;
+  console.log(collections)
+  return (
+    <>
+    {collections.nodes.map((collection ,index)=> <FeaturedCollection key={index} collection={collection} />)}
+    </>
+  )
+}
+
 function FeaturedCollection({collection}) {
   if (!collection) return null;
   const image = collection?.image;
@@ -48,7 +62,9 @@ function FeaturedCollection({collection}) {
     >
       {image && (
         <div className="featured-collection-image">
-          <Image data={image} sizes="100vw" />
+          {/* <Image data={image} sizes="100vw"/> */}
+          <Image data={image} width={200}
+          height={200}></Image>
         </div>
       )}
       <h1>{collection.title}</h1>
@@ -110,7 +126,7 @@ const FEATURED_COLLECTION_QUERY = `#graphql
   }
   query FeaturedCollection($country: CountryCode, $language: LanguageCode)
     @inContext(country: $country, language: $language) {
-    collections(first: 1, sortKey: UPDATED_AT, reverse: true) {
+    collections(first: 5, sortKey: UPDATED_AT, reverse: true) {
       nodes {
         ...FeaturedCollection
       }
