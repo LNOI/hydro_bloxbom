@@ -299,13 +299,16 @@ aside li {
   gap: 1rem;
 }
 
-
-
 /*
 * --------------------------------------------------
 * routes/__index
 * --------------------------------------------------
 */
+.list-featured-collection {
+  display: flex;
+  flex-direction: row;
+}
+
 .featured-collection {
   display: block;
   margin-bottom: 2rem;
