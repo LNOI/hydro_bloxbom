@@ -6,14 +6,8 @@
     "moduleResolution": "Bundler",
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "app/*"
-      ]
+      "~/*": ["app/*"]
     }
   },
-  "include": [
-    "./**/*.d.ts",
-    "./**/*.js",
-    "./**/*.jsx"
-  ]
+  "include": ["./**/*.d.ts", "./**/*.js", "./**/*.jsx"]
 }

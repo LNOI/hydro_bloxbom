@@ -20,8 +20,7 @@ export async function loader({context}) {
   // const featuredCollection = collections.nodes[0];
   const recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY);
   // return defer({featuredCollection, recommendedProducts});
-  return defer({collections,recommendedProducts})
-
+  return defer({collections, recommendedProducts});
 }
 
 export default function Homepage() {
@@ -44,12 +43,14 @@ export default function Homepage() {
 
 function ListFeaturedCollection({collections}) {
   if (!collections) return null;
-  console.log(collections)
+  console.log(collections);
   return (
     <>
-    {collections.nodes.map((collection ,index)=> <FeaturedCollection key={index} collection={collection} />)}
+      {collections.nodes.map((collection, index) => (
+        <FeaturedCollection key={index} collection={collection} />
+      ))}
     </>
-  )
+  );
 }
 
 function FeaturedCollection({collection}) {
@@ -63,8 +64,7 @@ function FeaturedCollection({collection}) {
       {image && (
         <div className="featured-collection-image">
           {/* <Image data={image} sizes="100vw"/> */}
-          <Image data={image} width={200}
-          height={200}></Image>
+          <Image data={image} width={200} height={200}></Image>
         </div>
       )}
       <h1>{collection.title}</h1>

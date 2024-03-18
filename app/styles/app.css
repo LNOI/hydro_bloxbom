@@ -299,8 +299,6 @@ aside li {
   gap: 1rem;
 }
 
-
-
 /*
 * --------------------------------------------------
 * routes/__index
@@ -316,7 +314,6 @@ aside li {
   margin-bottom: 2rem;
   position: relative;
 }
-
 
 .featured-collection-image {
   aspect-ratio: 1 / 1;
