@@ -8,6 +8,9 @@
     "build": "shopify hydrogen build",
     "dev": "shopify hydrogen dev --codegen",
     "preview": "npm run build && shopify hydrogen preview",
+    "prettier": "prettier",
+    "build:css": "node-sass ./scss -o ./app/styles --output-style compressed",
+    "dev:css": "npm run build:css && node-sass -rw ./scss -o ./app/styles",
     "lint": "eslint --no-error-on-unmatched-pattern --ext .js,.ts,.jsx,.tsx .",
     "codegen": "shopify hydrogen codegen"
   },
@@ -26,6 +29,7 @@
     "graphql": "^16.6.0",
     "graphql-tag": "^2.12.6",
     "isbot": "^3.6.6",
+    "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
