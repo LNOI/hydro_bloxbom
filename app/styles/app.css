@@ -3,7 +3,6 @@
   --cart-aside-summary-height-with-discount: 300px;
   --cart-aside-summary-height: 250px;
   --grid-item-width: 355px;
-  --header-height: 64px;
   --color-dark: #000;
   --color-light: #fff;
 }
@@ -127,16 +126,6 @@ aside li {
 * components/Header
 * --------------------------------------------------
 */
-.header {
-  align-items: center;
-  background: #fff;
-  display: flex;
-  height: var(--header-height);
-  padding: 0 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
 
 .header-menu-mobile-toggle {
   @media (min-width: 48em) {
@@ -158,10 +147,6 @@ aside li {
     grid-gap: 1rem;
     margin-left: 3rem;
   }
-}
-
-.header-menu-item {
-  cursor: pointer;
 }
 
 .header-ctas {

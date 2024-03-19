@@ -29,8 +29,8 @@ export default function Homepage() {
   return (
     <div className="home">
       {/* <FeaturedCollection collection={data.featuredCollection} /> */}
-      <ListFeaturedCollection collections={data.collections} />
-      <RecommendedProducts products={data.recommendedProducts} />
+      {/* <ListFeaturedCollection collections={data.collections} />
+      <RecommendedProducts products={data.recommendedProducts} /> */}
     </div>
   );
 }

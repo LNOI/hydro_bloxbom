@@ -40,7 +40,7 @@ export const shouldRevalidate = ({formMethod, currentUrl, nextUrl}) => {
 export function links() {
   return [
     {rel: 'stylesheet', href: resetStyles},
-    {rel: 'stylesheet', href: appStyles},
+    // {rel: 'stylesheet', href: appStyles},
     {rel: 'stylesheet', href: sharedStyles},
     {rel: 'stylesheet', href: utilsStyles},
     {
