@@ -1,5 +1,10 @@
-.header{
+@import "./index.scss";
+
+.header {
     h1 {
         color: red;
+        @include mobile {
+            color: blue;
+        }
     }
 }
