@@ -12,7 +12,7 @@
   z-index: 1;
   padding: 0px 16px;
   a {
-    color: $red-text-color;
+    color: $header-text-color-hover;
   }
   .header-navigation {
     margin-left: 30px;
@@ -22,30 +22,30 @@
     .header-navigation-item {
       display: flex;
       align-items: center;
-      margin: 0 20px;
+      margin: 0 10px;
       color: $header-text-color;
       cursor: pointer;
       position: relative;
-
+      font-weight: $semiBold;
       &.active {
         color: $red-text-color;
       }
 
       .header-navigation-item-icon {
-        margin-right: 3px;
+        margin-right: 2px;
         width: 25px;
         height: 25px;
         fill: $header-text-color;
         &.active {
-          fill: $red-text-color;
+          fill: $header-text-color-hover;
         }
       }
 
       &:hover {
         .header-navigation-item-icon,
         span {
-          color: $red-text-color;
-          fill: $red-text-color;
+          color: $header-text-color-hover;
+          fill: $header-text-color-hover;
         }
       }
     }
