@@ -1,0 +1,122 @@
+@import './index.scss';
+
+.header-wrapper {
+  max-width: 100vw;
+  height: $header-height;
+  background-color: $mainBg;
+  color: $header-text-color;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 0px 16px;
+
+  .header-item {
+    display: flex;
+    align-items: center;
+    .logo {
+      height: 27.5px;
+      width: 106px;
+      padding-right: 25px;
+      border-right: 1px solid $header-text-color-hover;
+    }
+    a {
+      color: $header-text-color-hover;
+    }
+    .header-navigation {
+      margin-left: 30px;
+      display: flex;
+      font-size: $smallFontSize;
+
+      .header-navigation-item {
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+        color: $header-text-color;
+        cursor: pointer;
+        position: relative;
+        font-weight: $semiBold;
+        position: relative;
+        padding: 10px 2px;
+        &::before {
+          transition: 300ms;
+          height: 2px;
+          bottom: 0;
+          content: '';
+          position: absolute;
+          background-color: $header-text-color-hover;
+          width: 0%;
+          opacity: 0;
+        }
+
+        &.active {
+          color: $red-text-color;
+          &::before {
+            width: 100%;
+            opacity: 1;
+          }
+        }
+
+        .header-navigation-item-icon {
+          margin-right: 3px;
+          width: 20px;
+          height: 20px;
+          fill: $header-text-color;
+          &.active {
+            fill: $header-text-color-hover;
+          }
+        }
+
+        &:hover {
+          .header-navigation-item-icon,
+          span {
+            color: $header-text-color-hover;
+            fill: $header-text-color-hover;
+          }
+          &::before {
+            width: 100%;
+            opacity: 1;
+          }
+        }
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+    .header-action {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+}
+
+button {
+  opacity: 1;
+  font-size: $smallFontSize;
+  font-weight: 400px;
+  transition: opacity 0.5s ease-out;
+  padding: 10px 16px;
+  border-radius: 0.375rem;
+  color: $white-text-color;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+.button-contained {
+}
+
+.button-mainColor {
+  background-color: $red-text-color;
+}
+
+.button-secondaryColor {
+  background-color: $secondary-button;
+}

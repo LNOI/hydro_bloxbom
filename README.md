@@ -16,6 +16,7 @@ Hydrogen is Shopify’s stack for headless commerce. Hydrogen is designed to dov
 - GraphQL generator
 - TypeScript and JavaScript flavors
 - Minimal setup of components and routes
+- SCSS
 
 ## Getting started
 
@@ -37,6 +38,18 @@ npm run build
 
 ```bash
 npm run dev
+```
+
+## Format code
+
+```bash
+npm run prettier
+```
+
+## Run scss watch
+
+```bash
+npm run dev:css
 ```
 
 ## Setup for using Customer Account API (`/account` section)
@@ -85,3 +98,8 @@ Alternately, the values of the required environment variables "PUBLIC_CUSTOMER_A
 
 > [!NOTE]
 > B2B features such as contextual pricing is not available in SF API with Customer Account API login. If you require this feature, we suggest using the [legacy-customer-account-flow](https://github.com/Shopify/hydrogen/tree/main/examples/legacy-customer-account-flow). This feature should be available in the Customer Account API in the 2024-04 release.
+
+### How to use scss in project
+> Create file .scss in folder scss
+> Run watch mode scss npm run dev:css
+> Output in app/styles

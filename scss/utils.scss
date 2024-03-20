@@ -1,0 +1,14 @@
+$justifyContentList: (
+    center: center,
+    flex-start: start,
+    flex-end: end,
+    space-between: between,
+    space-around: around,
+    space-evenly: evenly
+);
+
+@each $justify, $class in $justifyContentList {
+    .justify-#{$class} {
+        justify-content: $justify !important;
+    }
+}
