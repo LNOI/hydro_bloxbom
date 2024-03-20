@@ -14,8 +14,10 @@ export function Header({header, isLoggedIn, cart}) {
       </div>
       <div className="header-item header-middle"></div>
       <div className="header-item header-right">
-        <Button label="Login" color="secondary" />
-        <Button label="Register" />
+        <div className="header-action">
+          <Button label="Login" color="secondary" />
+          <Button label="Register" />
+        </div>
       </div>
     </header>
   );

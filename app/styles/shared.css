@@ -61,6 +61,12 @@
         .header-wrapper .header-item .header-navigation .header-navigation-item:hover::before {
           width: 100%;
           opacity: 1; }
+        @media only screen and (max-width: 1024px) {
+          .header-wrapper .header-item .header-navigation .header-navigation-item {
+            display: none; } }
+    @media only screen and (max-width: 1024px) {
+      .header-wrapper .header-item .header-action {
+        display: none; } }
 
 button {
   opacity: 1;

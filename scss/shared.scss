@@ -79,6 +79,14 @@
             opacity: 1;
           }
         }
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+    .header-action {
+      @include tablet {
+        display: none;
       }
     }
   }
