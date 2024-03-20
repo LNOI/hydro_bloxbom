@@ -127,3 +127,8 @@ code {
   font-family: monospace;
   padding: 0.25rem;
 }
+
+button {
+  outline: none;
+  border: none;
+}

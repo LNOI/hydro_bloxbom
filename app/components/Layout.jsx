@@ -3,8 +3,7 @@ import {Header} from '~/components/Header';
 const mock = {
   header: {
     shop: {
-      name: 'BloxBom',
-      urls: 'imgs',
+      name: 'BloxBoom',
     },
     menu: [
       {
@@ -29,8 +28,11 @@ const mock = {
 export function Layout({children}) {
   return (
     <div>
+      {/* <ThemeProvider theme={theme}> */}
+
       <Header header={mock.header} />
       <main>{children}</main>
+      {/* </ThemeProvider> */}
     </div>
   );
 }

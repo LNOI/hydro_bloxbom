@@ -1,8 +1,9 @@
-import LocalGroceryStoreRoundedIcon from '@mui/icons-material/LocalGroceryStoreRounded';
+import { FaShoppingCart } from "react-icons/fa";
 
-import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
+import { MdSupportAgent } from "react-icons/md";
 
-import LiveHelpRoundedIcon from '@mui/icons-material/LiveHelpRounded';
+import { FaQuestionCircle } from "react-icons/fa";
+
 
 const HEADER_NAME = {
     STORE: 'Store',
@@ -14,13 +15,13 @@ const HEADER_NAME = {
 export function genIconHeader(pathName, extraClass) {
     switch (pathName) {
         case HEADER_NAME.STORE:
-            return <LocalGroceryStoreRoundedIcon className={extraClass} />
+            return <FaShoppingCart className={extraClass} />
         // case HEADER_NAME.ORDER_STATUS:
         //     return
         case HEADER_NAME.SUPPORT:
-            return <SupportAgentRoundedIcon className={extraClass} />
+            return <MdSupportAgent className={extraClass} />
         case HEADER_NAME.FAQ:
-            return <LiveHelpRoundedIcon className={extraClass} />
+            return <FaQuestionCircle className={extraClass} />
         default:
             <>ICON NOT FOUND</>
 
